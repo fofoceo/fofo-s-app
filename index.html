@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fofo · The Weekly Edit</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%235E1B2D'/%3E%3Ctext x='32' y='44' font-family='Georgia' font-style='italic' font-size='36' text-anchor='middle' fill='%23F3DEDA'%3Ef%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+  <header class="topbar">
+    <a class="logo" href="#/today">FO<i>f</i>O</a>
+    <button class="icon-btn" data-act="nav-toggle" aria-label="Open menu">☰</button>
+  </header>
+
+  <div class="app">
+    <aside class="sidebar">
+      <a class="brand" href="#/today">
+        <div class="logo">FO<i>f</i>O</div>
+        <div class="sub">The Weekly Edit</div>
+      </a>
+      <nav class="nav">
+        <a href="#/today" data-route="today"><span>01</span>Today</a>
+        <a href="#/week" data-route="week"><span>02</span>This Week</a>
+        <a href="#/schedule" data-route="schedule"><span>03</span>Schedule</a>
+        <a href="#/goals" data-route="goals"><span>04</span>Vision &amp; Goals</a>
+        <a href="#/tasks" data-route="tasks"><span>05</span>Daily Tasks</a>
+        <a href="#/productivity" data-route="productivity"><span>06</span>Productivity</a>
+        <a href="#/finance" data-route="finance"><span>07</span>Finance</a>
+        <a href="#/journal" data-route="journal"><span>08</span>Journal</a>
+        <a href="#/fitness" data-route="fitness"><span>09</span>Fitness</a>
+      </nav>
+      <div class="side-foot">
+        <button class="timer-pill" id="timerPill" data-act="go" data-to="productivity" hidden>Focus · <span>25:00</span></button>
+        <button class="sync-status" id="syncStatus" data-act="settings" hidden></button>
+        <button class="btn ghost sm" data-act="settings">Settings &amp; backup</button>
+        <p class="side-quote">Soft discipline, beautiful results.</p>
+      </div>
+    </aside>
+
+    <main id="view"></main>
+  </div>
+
+  <div class="modal" id="modal" hidden></div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <input type="file" id="importFile" accept="application/json" hidden>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
+  <script src="js/config.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/data-wellness.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/sync.js"></script>
+</body>
+</html>
